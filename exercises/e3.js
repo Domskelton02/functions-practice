@@ -16,7 +16,19 @@
 
 // Your code goes here...
 
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  if (!Array.isArray(arr) || typeof val1 !== 'number' || typeof val2 !== 'number') {
+      throw new Error("Invalid input. Please ensure you provide an array followed by two numbers.");
+  }
+  return arr.some(item => item > val1 && item < val2);
+}
 
+console.log(doesArrayIncludeItemsBetweenVals([1, 2, 3, 4, 5], 2, 4)); // true, because 3 is between 2 and 4
+console.log(doesArrayIncludeItemsBetweenVals([10, 20, 30, 40], 15, 35)); // true, because 20 and 30 are between 15 and 35
+console.log(doesArrayIncludeItemsBetweenVals([-5, -4, -3, -2], -4, -2)); // true, because -3 is between -4 and -2
+console.log(doesArrayIncludeItemsBetweenVals([1, 2, 3, 4, 5], 0, 1)); // false, no values between 0 and 1
+
+// Andrey Codez, 9 months ago • Initial commit
 
 
 /**
@@ -36,6 +48,24 @@
 
 // Your code goes here...
 
+function getValueWithConditionOne(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+      return 80;
+  }
+  return (num1 + num2) * 2;
+}
+const getValueWithConditionTwo = (num1, num2) => {
+  if (num1 === 40 && num2 === 40) {
+      return 80;
+  }
+  return (num1 + num2) * 2;
+}
+const getValueWithConditionThree = function(num1, num2) {
+  if (num1 === 40 && num2 === 40) {
+      return 80;
+  }
+  return (num1 + num2) * 2;
+}
 
 
 
